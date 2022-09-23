@@ -2,16 +2,18 @@
 
 clear;
 
+db="MOCK_DATA.csv"
+
 #extract logic into functions for readability and reuseability
 get_names() {
     echo 'Please enter your First and Last Name, separated by a space:';
     read firstname lastname;
     if [[ "$firstname" =~ [a-zA-Z] ]] && [[ "$lastname" =~ [a-zA-Z] ]]
+    # i could do better validation here, right now only accounds for a-z. :/
     then
-        echo "Name format $firstname $lastname is valid."
-        break
+        echo "Welcome, ${firstname}!"
     else
-        echo "Name format is invalid. Please try again."
+        echo "Error: Name format is invalid. Please try again."
         get_names
     fi
 }
@@ -20,19 +22,22 @@ get_email() {
     echo 'Please register an email:';
     read email;
     # validate that email is formatted correctly
-    if [[ "$email" =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$ ]]
+    
+    if ! [[ "$email" =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$ ]]
+    # if email does NOT look like an email, try again
     then
-        echo "Email address $email is valid."
-        break
-    else
-        echo "Email address $email is invalid. Please try again."
+        echo "Error: Email address $email is invalid. Please try again."
         get_email
     fi
-    # todo: validate that email does not exist in database
-    found_email=`sh lookup.sh MOCK_DATA.csv 'Email address' ${email}`
+    
+    # validate that email does not exist in database
+    
+    found_email=`sh lookup.sh ${db} 'Email address' ${email}`
+    # lookup.sh will return nothing or the corresponding entry if it finds a match
+    # so, we're asking 'if the value saved in found_email is NOT nothing, then retry the email'
     if ! [[ -z "$found_email" ]]
     then
-        echo 'email already exists. Please enter another'
+        echo 'Error: Email address already exists. Please enter another'
         get_email
     fi
 }
@@ -41,10 +46,10 @@ get_username() {
     echo 'Enter a new Username:';
     read username;
     # todo: validate that usernames do not already exist in database
-    found_user=`sh lookup.sh MOCK_DATA.csv Username ${username}`
+    found_user=`sh lookup.sh ${db} Username ${username}`
     if ! [[ -z "$found_user" ]]
     then
-        echo 'Username already exists. Please enter another'
+        echo 'Error: Username already exists. Please enter another'
         get_username
     fi
 }
@@ -69,13 +74,14 @@ get_password() {
     # bonus: validate passwords to have a certain level of complexity eg: "one character and one number and one symbol... ect"
 }
 
-# take in a firstname, lastname, username, email and password
+# here i am calling the functions i defined earlier to gather and validate the input data
+
 get_names;
-get_username;
 get_email;
+get_username;
 get_password;
 
-#validate that the info is correct
+# now, validate with the user that their info is correct
 echo "--------------------------------";
 echo "Name: ${firstname} ${lastname}";
 echo "Username: ${username}";
@@ -86,11 +92,14 @@ echo "--------------------------------";
 echo "Is this information correct? [y/N] (prompt will restart if not)";
 read -r response;
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+# this regex checks for any capitalization of 'yes' or 'y'
 then
+    # create our output string with commas between the values
     output="${firstname},${lastname},${email},${username},${password_encoded}";
     echo "Saving data..."
-    # save this information to a csv file
-    echo $output >> output.csv;
+    
+    # save this information to the csv file
+    echo $output >> $db;
 
     echo "Done! Thank you for registering. Your business is very important to us!"
 else
