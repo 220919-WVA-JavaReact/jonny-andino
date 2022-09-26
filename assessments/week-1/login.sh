@@ -35,7 +35,32 @@ display_info(){
     sh parser.sh ${db} | grep -A 4 -B 4 "^Username: ${username}$"
 }
 
+delete_account_or_exit(){
+    echo "Please select one of the following options:"
+    echo "1 - Delete user account and data"
+    echo "2 - Logout"
+
+    read choice;
+
+    if [ $choice -eq 1 ]
+    then
+        sed "/${username}/d" $db > tmpfile
+        mv tmpfile $db
+
+        clear;
+        echo "Successfully deleted profile! Thank you for your business!"
+    elif [ $choice -eq 2 ]
+    then
+        clear;
+        echo "Successfully logged out! Thank you for your business!"
+    else
+        echo 'Please select a choice from 1-2'
+        delete_account_or_exit
+    fi
+}
+
 echo 'Welcome Back!'
 get_username
 get_password
 display_info
+delete_account_or_exit
