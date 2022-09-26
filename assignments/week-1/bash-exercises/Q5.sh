@@ -8,8 +8,10 @@ evaluate(){
     if [ $1 -gt 0 ]
     then
         pos=$(( $pos + 1 ))
+        echo "pos: ${1}"
     else
         neg=$(( $neg + 1 ))
+        echo "neg: ${1}"
     fi
 }
 
