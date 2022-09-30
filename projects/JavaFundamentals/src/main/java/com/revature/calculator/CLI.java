@@ -44,16 +44,18 @@ public class CLI {
     }
 
     public void evaluate() throws ScriptException {
+
+        // dark magic i found from the internet
+        ScriptEngineManager mgr = new ScriptEngineManager();
+        ScriptEngine engine     = mgr.getEngineByName("JavaScript");
+        String expression       = "" + this.first + this.operator + this.second; // anything can be a string if you concat to a string!
+        String answer           = "" + engine.eval(expression);
+
         System.out.println (
             this.first + " "
             + this.operator + " "
             + this.second + " = "
+            + answer
         );
-
-        // dark magic i found from the internet
-        ScriptEngineManager mgr = new ScriptEngineManager();
-        ScriptEngine engine = mgr.getEngineByName("JavaScript");
-        String expression = "" + this.first + this.operator + this.second;
-        System.out.println(engine.eval(expression));
     }
 }
