@@ -1,9 +1,33 @@
-# Goals for today
+# Goals 
 
-Build a basic console application for teachers to register and sign up for teaching courses. 
+- Login Functionality *
+- Register Functionality
+- Create Course
+- Update Course
+- Read all courses
 
-There are a few user stories we want to be aware of while building.
+Models: done for now
 
-- We should be able to register/login as a teacher
+TODO:
+
+TeacherService:
+- Updated login Method 
+- Register Method (Menu logic and validation)
+
+
+TeacherDAO:
+- Create Teacher Method
 - 
 
+Teacher:
+
+CourseService:
+- Create Course Method (Menu Logic and Validation/Business logic if necessary)
+- Assign Course (Needs a teacher to update it with and menu logic)
+- View all Courses (Menu Logic and Validation)
+
+CourseDAO:
+- Create course Method
+- Update course Method
+
+Course:

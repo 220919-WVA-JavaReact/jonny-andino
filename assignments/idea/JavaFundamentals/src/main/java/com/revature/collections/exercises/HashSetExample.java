@@ -13,7 +13,7 @@ public class HashSetExample {
 
         // 1. Write a Java program to append the specified element to the end of a hash set
 
-        Set<Integer> test = new HashSet<Integer>();
+        Set<Integer> test = new HashSet<>();
         test.add(4);
         test.add(5);
         test.add(6);

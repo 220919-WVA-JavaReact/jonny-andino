@@ -2,6 +2,7 @@ package com.revature.collections.exercises;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 public class ArrayListExample {
 
@@ -12,7 +13,7 @@ public class ArrayListExample {
 
         // 1. Write a Java program to create a new array list, add some colors (string) and print out the collection.
 
-        ArrayList<String> colors = new ArrayList<String>();
+        List<String> colors = new ArrayList<String>();
 
         colors.add("Red");
         colors.add("Green");

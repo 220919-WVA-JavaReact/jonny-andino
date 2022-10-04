@@ -14,7 +14,7 @@ public class HashMapExample {
         // 1. Create a HashMap with Integers for the Keys and Strings for the Entries. Insert 5 entries with numbers as
         // the key and colors as the value associated
 
-        Map<Integer, String> test = new HashMap<Integer, String>();
+        Map<Integer, String> test = new HashMap<>();
         test.put(5,  "Red");
         test.put(10, "Green");
         test.put(15, "Blue");

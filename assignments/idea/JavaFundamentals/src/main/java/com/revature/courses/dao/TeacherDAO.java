@@ -10,4 +10,7 @@ public interface TeacherDAO {
     // we could have these implemented for working with files, a SQL database, or whatever
 
     Teacher getByUsername(String username);
+
+    // we need a method for teacher creation
+    Teacher createTeacher(String first, String last, String username, String password);
 }

@@ -13,6 +13,11 @@ public class Course {
         this.teacherId = teacherId;
     }
 
+    public Course(String courseNum, int teacherId) {
+        this.courseNum = courseNum;
+        this.teacherId = teacherId;
+    }
+
     public Course() {
     }
 
