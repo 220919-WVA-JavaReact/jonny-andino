@@ -70,6 +70,20 @@ public class ConnectionUtil {
         }
 
         */
+
+        // most secure method (env)
+        String url = System.getenv("url");
+        String username = System.getenv("username");
+        String password = System.getenv("password");
+
+        try {
+            System.out.println("Creating new connection...");
+            conn = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
+            System.out.println("Couldn't establish connection...");
+            throw new RuntimeException(e);
+        }
+
         return conn;
     }
 }

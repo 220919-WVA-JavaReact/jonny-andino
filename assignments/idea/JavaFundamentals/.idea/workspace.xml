@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625d1f69-0567-421d-8240-282b957bcd25" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/util/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/util/ConnectionUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
