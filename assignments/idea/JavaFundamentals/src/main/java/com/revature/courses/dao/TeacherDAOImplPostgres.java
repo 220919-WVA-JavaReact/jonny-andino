@@ -50,7 +50,40 @@ public class TeacherDAOImplPostgres implements TeacherDAO{
 
     @Override
     public Teacher createTeacher(String first, String last, String username, String password) {
-        return null;
+        // here we're going to add a teacher to the db
+
+        //create blank teacher
+        Teacher teach = new Teacher();
+        try(Connection conn = ConnectionUtil.getConnection()){
+            // inside of here is where we write and execute our sql statement
+            String sql = "INSERT INTO teachers (\"first\", \"last\", \"username\", \"password\") VALUES (?,?,?,?) RETURNING *" ;
+            // set individual values
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, first);
+            stmt.setString(2, last);
+            stmt.setString(3, username);
+            stmt.setString(4, password);
+
+            ResultSet rs;
+
+            if ((rs = stmt.executeQuery()) != null){
+                rs.next();
+
+                int id = rs.getInt("teacher_id");
+                String receivedFirst    = rs.getString("first");
+                String receivedLast     = rs.getString("last");
+                String receivedUsername = rs.getString("username");
+                String receivedPassword = rs.getString("password");
+
+                teach = new Teacher(id, receivedFirst, receivedLast, receivedUsername, receivedPassword);
+            }
+
+        } catch(SQLException e){
+            System.out.println("couldn't add user to db");
+            e.printStackTrace();
+        }
+
+        return teach;
     }
 
     @Override
