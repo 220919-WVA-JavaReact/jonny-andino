@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625d1f69-0567-421d-8240-282b957bcd25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/collections/exercises/ArrayListExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/collections/exercises/ArrayListExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/collections/exercises/HashMapExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/collections/exercises/HashMapExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/collections/exercises/HashSetExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/collections/exercises/HashSetExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/collections/exercises/LinkedListExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/collections/exercises/LinkedListExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/models/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com/revature/collections/exercises/ArrayListExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com/revature/collections/exercises/ArrayListExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com/revature/collections/exercises/LinkedListExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com/revature/collections/exercises/LinkedListExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com/revature/courses/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/dao/TeacherDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com/revature/courses/dao/TeacherDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/dao/TeacherDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com/revature/courses/dao/TeacherDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/target/com/revature/courses/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com/revature/courses/service/TeacherService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
