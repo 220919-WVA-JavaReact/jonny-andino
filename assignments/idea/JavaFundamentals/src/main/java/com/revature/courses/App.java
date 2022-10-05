@@ -46,10 +46,10 @@ public class App {
 
             switch(subChoice){
                 case "1":
-                    cs.createCourse();
+                    cs.createCourse(loggedInTeacher);
                     break;
                 case "2":
-                    cs.assignCourse(loggedInTeacher.getTeacherId());
+                    cs.assignCourse(loggedInTeacher);
                     break;
                 default:
                     System.out.println("Invalid input");

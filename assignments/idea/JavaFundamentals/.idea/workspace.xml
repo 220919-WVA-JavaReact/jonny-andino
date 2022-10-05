@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="625d1f69-0567-421d-8240-282b957bcd25" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAOImplPostgres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAOImplPostgres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/models/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/CourseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

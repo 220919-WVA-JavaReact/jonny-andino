@@ -5,17 +5,17 @@ import java.util.Objects;
 public class Course {
     private String courseNum;
     private String title;
-    private int teacherId;
+    private Teacher teacher;
 
-    public Course(String courseNum, String title, int teacherId) {
+    public Course(String courseNum, String title, Teacher teacher) {
         this.courseNum = courseNum;
         this.title = title;
-        this.teacherId = teacherId;
+        this.teacher = teacher;
     }
 
-    public Course(String courseNum, int teacherId) {
+    public Course(String courseNum, Teacher teacher) {
         this.courseNum = courseNum;
-        this.teacherId = teacherId;
+        this.teacher = teacher;
     }
 
     public Course() {
@@ -37,12 +37,12 @@ public class Course {
         this.title = title;
     }
 
-    public int getTeacherId() {
-        return teacherId;
+    public Teacher getTeacherId() {
+        return teacher;
     }
 
-    public void setTeacherId(int teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Course {
         return "Course{" +
                 "courseNum='" + courseNum + '\'' +
                 ", title='" + title + '\'' +
-                ", teacherId=" + teacherId +
+                ", teacher=" + teacher +
                 '}';
     }
 
@@ -59,11 +59,11 @@ public class Course {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Course course = (Course) o;
-        return teacherId == course.teacherId && courseNum.equals(course.courseNum) && title.equals(course.title);
+        return courseNum.equals(course.courseNum) && title.equals(course.title) && teacher.equals(course.teacher);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(courseNum, title, teacherId);
+        return Objects.hash(courseNum, title, teacher);
     }
 }
