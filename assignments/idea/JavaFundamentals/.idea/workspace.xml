@@ -5,8 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625d1f69-0567-421d-8240-282b957bcd25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/util/ConnectionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/arrays/ArrayCopyOfDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/arrays/ArrayDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/arrays/PersonArrayDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/calculator/CLI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/calculator/CalcRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/collections/exercises/ArrayListExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/collections/exercises/HashMapExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/collections/exercises/HashSetExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/collections/exercises/LinkedListExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/collections/intro/CollectionDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/collections/intro/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/dao/CourseDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/dao/CourseDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/dao/TeacherDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/dao/TeacherDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/models/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/models/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/service/CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/courses/service/TeacherService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/objects/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/objects/PersonDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/pokemon/Pokemon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/pokemon/PokemonGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com/revature/strings/StringDriver.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,17 +64,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bow68/Documents/Projects/revature/jonny-andino/assignments/idea/JavaFundamentals&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/bow68/Documents/Projects/revature/jonny-andino/assignments/idea/JavaFundamentals",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bow68\Documents\Projects\revature\jonny-andino\assignments\idea\JavaFundamentals\src\main\java\com\revature" />

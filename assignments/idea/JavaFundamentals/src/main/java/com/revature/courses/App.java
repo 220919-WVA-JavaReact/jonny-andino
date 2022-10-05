@@ -3,7 +3,9 @@ package com.revature.courses;
 import com.revature.courses.models.Teacher;
 import com.revature.courses.service.CourseService;
 import com.revature.courses.service.TeacherService;
+import com.revature.courses.util.ConnectionUtil;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class App {
@@ -19,6 +21,7 @@ public class App {
 
         // we can start the app with some sort of menu and loop
         // we'll want to prompt the user to either log in or register
+        
 
         System.out.println("Press 1 to log in. Press 2 to register");
 
