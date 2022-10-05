@@ -47,6 +47,7 @@ public class ConnectionUtil {
         */
 
         // more secure method
+        /*
         String url = "";
         String username = "";
         String password = "";
@@ -68,6 +69,7 @@ public class ConnectionUtil {
             e.printStackTrace();
         }
 
+        */
         return conn;
     }
 }

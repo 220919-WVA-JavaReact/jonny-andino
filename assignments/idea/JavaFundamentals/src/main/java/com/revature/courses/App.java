@@ -21,7 +21,7 @@ public class App {
 
         // we can start the app with some sort of menu and loop
         // we'll want to prompt the user to either log in or register
-        
+
 
         System.out.println("Press 1 to log in. Press 2 to register");
 
