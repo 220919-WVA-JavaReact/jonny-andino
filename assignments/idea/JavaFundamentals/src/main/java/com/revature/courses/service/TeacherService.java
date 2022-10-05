@@ -2,8 +2,10 @@ package com.revature.courses.service;
 
 import com.revature.courses.dao.TeacherDAO;
 import com.revature.courses.dao.TeacherDAOImpl;
+import com.revature.courses.dao.TeacherDAOImplPostgres;
 import com.revature.courses.models.Teacher;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class TeacherService {
@@ -14,7 +16,7 @@ public class TeacherService {
 
     //whenever we want to make a call to the db, we need to provide a TeacherDAOImpl instance
 
-    TeacherDAO td = new TeacherDAOImpl(); // <-- can change the implementation whenever i want
+    TeacherDAO td = new TeacherDAOImplPostgres(); // <-- can change the implementation whenever i want
     Scanner sc = new Scanner(System.in);
     public Teacher login(){
         // the objective of this method is to call upon the DAO to get
@@ -50,5 +52,13 @@ public class TeacherService {
 
         // now that we created the DAO method, we just need to call it with the info provided.
         return td.createTeacher(first, last, username, password);
+    }
+
+    public void getAllTeachers(){
+        System.out.println("using the database to return all of our teachers");
+        List<Teacher> teacherList = td.getAllTeachers();
+        for(Teacher teacher : teacherList){
+            System.out.println(teacher);
+        }
     }
 }

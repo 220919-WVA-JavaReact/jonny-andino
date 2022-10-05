@@ -31,7 +31,7 @@ public class ConnectionUtil {
         }
         // if not, create new one
 
-        // insecure method
+        // insecure method (hardcode secure information)
         /*
         String url = "jdbc:postgresql://database-1.czkmk1xfv29p.us-east-2.rds.amazonaws.com:5432/postgres";
         String username = "postgres";
@@ -46,7 +46,7 @@ public class ConnectionUtil {
         }
         */
 
-        // more secure method
+        // more secure method (application.properties)
         /*
         String url = "";
         String username = "";
@@ -72,6 +72,7 @@ public class ConnectionUtil {
         */
 
         // most secure method (env)
+        // set env variables in the entrypoint class to the application. (App, Main ect...)
         String url = System.getenv("url");
         String username = System.getenv("username");
         String password = System.getenv("password");

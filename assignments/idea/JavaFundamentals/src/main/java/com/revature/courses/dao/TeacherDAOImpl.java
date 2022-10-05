@@ -1,12 +1,19 @@
 package com.revature.courses.dao;
 
 import com.revature.courses.models.Teacher;
+import com.revature.courses.util.ConnectionUtil;
 import com.sun.security.jgss.GSSUtil;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TeacherDAOImpl implements TeacherDAO{
     @Override
@@ -47,6 +54,11 @@ public class TeacherDAOImpl implements TeacherDAO{
     @Override
     public Teacher createTeacher(String first, String last, String username, String password) {
         System.out.println("future DAO method goes here");
+        return null;
+    }
+
+    @Override
+    public List<Teacher> getAllTeachers() {
         return null;
     }
 }

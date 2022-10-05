@@ -10,8 +10,6 @@ import java.util.Scanner;
 
 public class App {
 
-    // similarly to our service layer, when we want logic done we will  need an instance of
-
     public static TeacherService ts = new TeacherService();
     public static CourseService cs = new CourseService();
 
@@ -22,10 +20,8 @@ public class App {
         // we can start the app with some sort of menu and loop
         // we'll want to prompt the user to either log in or register
 
-        Connection conn  = ConnectionUtil.getConnection();
-        Connection conn2 = ConnectionUtil.getConnection();
 
-        System.out.println("Press 1 to log in. Press 2 to register");
+        System.out.println("Press 1 to log in. Press 2 to register Press 3 to view all teachers");
 
         Scanner sc = new Scanner(System.in);
 
@@ -40,6 +36,8 @@ public class App {
         } else if (choice.equals("2")) {
             // this is where we get registration credentials
             loggedInTeacher = ts.register();
+        } else if (choice.equals("3")){
+            ts.getAllTeachers();
         }
 
         if (loggedInTeacher != null) {

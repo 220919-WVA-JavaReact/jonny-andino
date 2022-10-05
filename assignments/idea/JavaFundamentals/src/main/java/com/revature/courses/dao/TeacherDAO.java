@@ -2,6 +2,8 @@ package com.revature.courses.dao;
 
 import com.revature.courses.models.Teacher;
 
+import java.util.List;
+
 public interface TeacherDAO {
     // inside here we are providing the basic requirements we want our DAO to have
     // this will essentially be a list of methods that we will be implemented
@@ -13,4 +15,7 @@ public interface TeacherDAO {
 
     // we need a method for teacher creation
     Teacher createTeacher(String first, String last, String username, String password);
+
+    //
+    List<Teacher> getAllTeachers();
 }
