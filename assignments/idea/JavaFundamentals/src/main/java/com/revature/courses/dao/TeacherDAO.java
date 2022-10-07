@@ -18,4 +18,6 @@ public interface TeacherDAO {
 
     //
     List<Teacher> getAllTeachers();
+
+    int deleteTeacher(Teacher teacher);
 }

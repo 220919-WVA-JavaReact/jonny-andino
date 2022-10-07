@@ -5,12 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625d1f69-0567-421d-8240-282b957bcd25" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/testing/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/testing/CountIncreasingValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/testing/DivideByZeroException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CountIncreasingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TeacherServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/revature/testing/Calculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/revature/testing/CountIncreasingValues.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/revature/testing/DivideByZeroException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CalculatorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CountIncreasingTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/TeacherServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JavaFundamentals.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaFundamentals.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/CourseDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/models/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/dao/TeacherDAOImplPostgres.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/courses/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/courses/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/CourseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/CourseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/CourseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/CourseDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/TeacherDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/TeacherDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/TeacherDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/TeacherDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/dao/TeacherDAOImplPostgres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/models/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/courses/models/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/courses/service/CourseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/courses/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/courses/service/TeacherService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +87,7 @@
       <recent name="C:\Users\bow68\Documents\Projects\revature\jonny-andino\projects\JavaFundamentals\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CountIncreasingTest">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="url" value="jdbc:postgresql://database-1.czkmk1xfv29p.us-east-2.rds.amazonaws.com:5432/postgres" />
@@ -78,6 +106,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFundamentals" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountIncreasingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFundamentals" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CountIncreasingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountIncreasingTest.exampleTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFundamentals" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CountIncreasingTest" />
+      <option name="METHOD_NAME" value="exampleTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountIncreasingTest.negativeExampleTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFundamentals" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CountIncreasingTest" />
+      <option name="METHOD_NAME" value="negativeExampleTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeacherServiceTest.deleteTeacherShouldReturnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFundamentals" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TeacherServiceTest" />
+      <option name="METHOD_NAME" value="deleteTeacherShouldReturnFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CountIncreasingTest" />
+        <item itemvalue="JUnit.CountIncreasingTest.negativeExampleTest2" />
+        <item itemvalue="JUnit.CountIncreasingTest.exampleTest2" />
+        <item itemvalue="JUnit.CalculatorTest" />
+        <item itemvalue="JUnit.TeacherServiceTest.deleteTeacherShouldReturnFalse" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

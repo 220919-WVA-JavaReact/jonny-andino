@@ -2,7 +2,6 @@ package com.revature.courses.service;
 
 import com.revature.courses.dao.TeacherDAO;
 import com.revature.courses.dao.TeacherDAOImpl;
-import com.revature.courses.dao.TeacherDAOImplPostgres;
 import com.revature.courses.models.Teacher;
 
 import java.util.List;
@@ -16,7 +15,16 @@ public class TeacherService {
 
     //whenever we want to make a call to the db, we need to provide a TeacherDAOImpl instance
 
-    TeacherDAO td = new TeacherDAOImplPostgres(); // <-- can change the implementation whenever i want
+    // we're gonna change this so that it is injected
+    TeacherDAO td; // = new TeacherDAOImpl(); // <-- can change the implementation whenever i want
+
+    public TeacherService(){
+        this.td = new TeacherDAOImpl();
+    }
+
+    public TeacherService(TeacherDAO td){
+        this.td = td;
+    }
     Scanner sc = new Scanner(System.in);
     public Teacher login(){
         // the objective of this method is to call upon the DAO to get
@@ -60,5 +68,14 @@ public class TeacherService {
         for(Teacher teacher : teacherList){
             System.out.println(teacher);
         }
+    }
+
+    public boolean deleteTeacher (Teacher teacher){
+        // here is where we'd add logic for deleting the specific teacher
+        // eventually, we'll call upon the dao layer to allow us to delete the teacher from the database
+        //whenever we delete a teacher the rows updated is 1
+        int rowsUpdated = td.deleteTeacher(teacher);
+
+        return (rowsUpdated > 0);
     }
 }

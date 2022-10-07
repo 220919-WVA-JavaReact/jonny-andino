@@ -2,63 +2,127 @@ package com.revature.courses.dao;
 
 import com.revature.courses.models.Teacher;
 import com.revature.courses.util.ConnectionUtil;
-import com.sun.security.jgss.GSSUtil;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TeacherDAOImpl implements TeacherDAO{
     @Override
     public Teacher getByUsername(String username) {
-        // i this method is where we do the actual tlaking to the database
-        // in our case we will be talking to a csv file, later though we will create
-        // another class to do the samer thing, but talks to an SQL database
+        // to get by username we are going to use a prepared statement to help us
+        // prevent SQL injection
 
-        // create a buffered reader to talk to our db
-        // we need a try catch block to make sure we don't run into a FileNotFoundException
+        // first create a teacher object to store the information i pull back
+        Teacher teach = new Teacher();
 
-        String line = "";
-        String splitBy = ",";
-        try {
-            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/teachers.csv"));
+        // we're going to use a try with resources block to ensure we close the connection
 
-            while ((line = br.readLine()) != null) {
-                // we need to check each line to see if the username matches our entered username
-                // then we should be able to send the user back to the front
+        try(Connection conn = ConnectionUtil.getConnection()){
+            String sql = "SELECT * FROM teachers WHERE username = ?";
+            //    data we want to insert into statement goes here ^
 
-                String[] info = line.split(splitBy);
+            PreparedStatement stmt = conn.prepareStatement(sql);
 
-                if (info[3].equals(username)) {
-                    int id = Integer.parseInt(info[0]);
-                    return new Teacher(id, info[1], info[2], info[3], info[4]);
-                }
+            //set the individual values for the question marks
+            stmt.setString(1,username);
+            ResultSet rs;
+
+            //since i am expecting one result i will handle it differently
+
+            if ((rs = stmt.executeQuery()) != null){
+                rs.next(); // iterate by one
+
+                int id          = rs.getInt("teacher_id");
+                String first    = rs.getString("first");
+                String last     = rs.getString("last");
+                String receivedUsername = rs.getString("username");
+                String password = rs.getString("password");
+
+                teach = new Teacher(id,first,last,receivedUsername,password);
             }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch(SQLException e){
             e.printStackTrace();
         }
 
-        return null;
+        return teach;
     }
 
     @Override
     public Teacher createTeacher(String first, String last, String username, String password) {
-        System.out.println("future DAO method goes here");
-        return null;
+        // here we're going to add a teacher to the db
+
+        //create blank teacher
+        Teacher teach = new Teacher();
+        try(Connection conn = ConnectionUtil.getConnection()){
+            // inside of here is where we write and execute our sql statement
+            String sql = "INSERT INTO teachers (\"first\", \"last\", \"username\", \"password\") VALUES (?,?,?,?) RETURNING *" ;
+            // set individual values
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, first);
+            stmt.setString(2, last);
+            stmt.setString(3, username);
+            stmt.setString(4, password);
+
+            ResultSet rs;
+
+            if ((rs = stmt.executeQuery()) != null){
+                rs.next();
+
+                int id = rs.getInt("teacher_id");
+                String receivedFirst    = rs.getString("first");
+                String receivedLast     = rs.getString("last");
+                String receivedUsername = rs.getString("username");
+                String receivedPassword = rs.getString("password");
+
+                teach = new Teacher(id, receivedFirst, receivedLast, receivedUsername, receivedPassword);
+            }
+
+        } catch(SQLException e){
+            System.out.println("couldn't add user to db");
+            e.printStackTrace();
+        }
+
+        return teach;
     }
 
     @Override
     public List<Teacher> getAllTeachers() {
-        return null;
+        Connection conn = ConnectionUtil.getConnection();
+
+        List<Teacher> teachers = new ArrayList<>();
+
+        //create a statement
+        try {
+            Statement statement = conn.createStatement();
+            String sql = "SELECT * FROM teachers";
+            ResultSet rs = statement.executeQuery(sql);
+
+            // to store all of our teachers, i plan to create an empty list of teachers
+            // and i will store the info inside of it
+
+            while(rs.next()){
+                int id          = rs.getInt("teacher_id");
+                String first    = rs.getString("first");
+                String last     = rs.getString("last");
+                String username = rs.getString("username");
+                String password = rs.getString("password");
+
+                // create a teacher object
+                Teacher teach = new Teacher(id,first,last,username,password);
+
+                teachers.add(teach);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return teachers;
+    }
+
+    @Override
+    public int deleteTeacher(Teacher teacher) {
+
+        return 0;
     }
 }
