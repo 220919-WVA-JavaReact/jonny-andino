@@ -9,7 +9,7 @@
 
     <servlet>
         <servlet-name>SanityServlet</servlet-name>
-        <servlet-class>org.example.SanityServlet</servlet-class>
+        <servlet-class>org.example.servlet.SanityServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

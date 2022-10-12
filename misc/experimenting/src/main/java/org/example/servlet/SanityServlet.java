@@ -1,4 +1,4 @@
-package org.example;
+package org.example.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +16,8 @@ public class SanityServlet extends HttpServlet {
         System.out.println("[LOG] - SanityServlet received a request at " + LocalDateTime.now());
         System.out.println("[LOG] - Request URI: " + req.getRequestURI());
         System.out.println("[LOG] - Request Method: " + req.getMethod());
-        System.out.println("[LOG] - Request Header, example" + req.getHeader("example"));
+        System.out.println("[LOG] - Request Header, example: " + req.getHeader("example"));
+        System.out.println("[LOG] - Request Query String: " + req.getQueryString());
 
         // we'll formulate a basic response to send back
 
