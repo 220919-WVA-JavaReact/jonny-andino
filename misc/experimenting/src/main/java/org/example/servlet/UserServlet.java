@@ -8,9 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 
 @WebServlet(value = "/user")
@@ -26,7 +24,7 @@ public class UserServlet extends HttpServlet {
         AppUser someUser = new AppUser(123,"jane","doe","jd42@revature.com","jd42","password");
         // we want to convert this java object into some sort of JSON string
 
-        String respPayload = objectMapper.writeValueAsString(someUser);
+        String respPayload = mapper.writeValueAsString(someUser);
 
         resp.setStatus(200);
         resp.setContentType("application/json");
