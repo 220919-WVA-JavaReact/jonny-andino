@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.model.AppUser;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,11 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-@WebServlet(value = "/user")
+
 public class UserServlet extends HttpServlet {
 
     // TODO what is the other servlets need an objectMapper? how do we share this reference among classes?
-    ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper;
+
+    public UserServlet(ObjectMapper mapper){
+        this.mapper = mapper;
+    }
+
+    @Override
+    public void init() throws ServletException {
+        System.out.println("[LOG] - UserServlet was instantiated");
+        System.out.println("[LOG] - Init param user-servlet-key: " + this.getServletConfig().getInitParameter("user-servlet-key"));
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

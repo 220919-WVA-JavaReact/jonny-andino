@@ -3,6 +3,13 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <display-name>My First Web App</display-name>
+
+    <!-- servlet context variables-->
+    <context-param>
+        <param-name>test-context-key</param-name>
+        <param-value>test-context-value</param-value>
+    </context-param>
 
     <!-- for each servlet, i'll need to define two things -->
     <!-- the servlet itself, and the mapping of the servlet -->
@@ -10,10 +17,15 @@
     <servlet>
         <servlet-name>SanityServlet</servlet-name>
         <servlet-class>org.example.servlet.SanityServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>SanityServlet</servlet-name>
         <url-pattern>/sanity</url-pattern>
     </servlet-mapping>
+    
+    <listener>
+        <listener-class>org.example.util.ContextLoaderListener</listener-class>
+    </listener>
 </web-app>

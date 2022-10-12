@@ -11,6 +11,18 @@ import java.time.LocalDateTime;
 public class SanityServlet extends HttpServlet {
 
     @Override
+    public void init() throws ServletException {
+        System.out.println("[LOG] - SanityServlet was instantiated");
+        System.out.println("[LOG] - Init param test-init-key: " + this.getServletConfig().getInitParameter("test-init"));
+        System.out.println("[LOG] - Context param test-context-key: " + this.getServletContext().getInitParameter("test-context-key"));
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("[LOG] - SanityServlet was destroyed");
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // we'll just add some println statements to check some info about the request
         System.out.println("[LOG] - SanityServlet received a request at " + LocalDateTime.now());
