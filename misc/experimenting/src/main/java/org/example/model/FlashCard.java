@@ -1,5 +1,7 @@
 package org.example.model;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.Objects;
 
 public class FlashCard {
@@ -7,9 +9,7 @@ public class FlashCard {
     private String questionText;
     private String answerText;
 
-    public FlashCard() {
-
-    }
+    public FlashCard() {}
 
     public FlashCard(int id, String questionText, String answerText) {
         this.id = id;

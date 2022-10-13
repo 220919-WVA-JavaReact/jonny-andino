@@ -17,7 +17,6 @@
     <servlet>
         <servlet-name>SanityServlet</servlet-name>
         <servlet-class>org.example.servlet.SanityServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
@@ -28,4 +27,5 @@
     <listener>
         <listener-class>org.example.util.ContextLoaderListener</listener-class>
     </listener>
+
 </web-app>

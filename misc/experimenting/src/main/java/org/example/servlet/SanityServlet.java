@@ -31,6 +31,8 @@ public class SanityServlet extends HttpServlet {
         System.out.println("[LOG] - Request Header, example: " + req.getHeader("example"));
         System.out.println("[LOG] - Request Query String: " + req.getQueryString());
 
+        System.out.println("[LOG] - was filtered? " + req.getAttribute("was-filtered"));
+
         // we'll formulate a basic response to send back
 
         // set the status code

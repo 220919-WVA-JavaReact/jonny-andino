@@ -4,13 +4,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.model.AppUser;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class UserServlet extends HttpServlet {
@@ -35,7 +35,10 @@ public class UserServlet extends HttpServlet {
         AppUser someUser = new AppUser(123,"jane","doe","jd42@revature.com","jd42","password");
         // we want to convert this java object into some sort of JSON string
 
+
         String respPayload = mapper.writeValueAsString(someUser);
+
+        System.out.println("[LOG] - Was request filtered? " + req.getAttribute("was-filtered"));
 
         resp.setStatus(200);
         resp.setContentType("application/json");

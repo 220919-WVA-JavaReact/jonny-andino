@@ -1,6 +1,7 @@
 package org.example.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.servlet.AuthServlet;
 import org.example.servlet.UserServlet;
 
 import javax.servlet.ServletContext;
@@ -24,7 +25,6 @@ public class ContextLoaderListener implements ServletContextListener {
         ServletContext context = sce.getServletContext();
         ServletRegistration.Dynamic registeredServlet = context.addServlet("UserServlet", userServlet);
         registeredServlet.addMapping("/user");
-        registeredServlet.setLoadOnStartup(3);
         registeredServlet.setInitParameter("user-servlet-key", "user-servlet-value");
     }
 
