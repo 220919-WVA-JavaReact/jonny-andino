@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="http://www.example.com">
+        <fieldset>
+            <legend>Your details</legend>
+            
+            <label for="username"> username: </label>
+            <input type="text" name="username" maxlength="50" placeholder="Enter your username here"/>
+            <br><br>
+            <label for="password"> password: </label>
+            <input type="password" name="password" maxlength="50" placeholder="Enter your password here">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Your review</legend>
+            <div>
+                <label for="hear-about">How did you hear about us?</label>
+                <select name="refer" id="hear-about">
+                    <option value="">Please make a selection</option>
+                    <option value="google">Google</option>
+                    <option value="advert">Advertisement</option>
+                    <option value="friend">From a friend</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <p>Would you visit again?</p>
+                <br>
+                <label for="">Yes: <input type="radio" name="will-return" value="yes"></label>
+                <label for="">No: <input type="radio" name="will-return" value="no"></label>
+                <label for="">Maybe: <input type="radio" name="will-return" value="maybe"></label>
+            </div>
+
+            <label>
+                Sign me up for email updates! 
+                <input type="checkbox" checked="checked" name="subscribes" id="">
+            </label>
+
+            <br><br>
+
+            <label for="">
+                Please provide and additional comments
+                <br>
+                <textarea name="comments" id="" cols="60" rows="10" maxlength="300"></textarea>
+            </label>
+        </fieldset>
+
+        <input type="submit" value="Submit review">
+    </form>
+</body>
+</html>

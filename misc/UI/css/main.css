@@ -1,0 +1,25 @@
+body{
+    background-color: #111;
+    color: #777;
+    font-family: monospace
+}
+
+.course {
+    border: 1px solid white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: black;
+}
+
+.course:hover{
+    background-color: #012;
+}
+
+#course-container{
+    display: flex;
+}

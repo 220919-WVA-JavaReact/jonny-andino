@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+html{
+    background-color: black;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #012;
+    color:#aaa;
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem
+}
+
+a{
+    color:aliceblue;
+    transition: 0.3s;
+}
+
+a:hover{
+    color:aqua;
+}
+
+.title {
+    font-size: 3rem;
+    border-bottom: 1px solid white;
+}
+.game-title {
+    font-size: 2rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 8px;
+}
+
+.gameinfo{
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #000505;
+    transition: 0.3s;
+}
+
+.gameinfo:hover{
+    background-color: #111;
+}
+
+.img-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
+    justify-content: space-around;
+    
+}
+
+.img-section img{
+    max-width: 320px;
+    margin: 0.5rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    object-fit: contain;
+}
