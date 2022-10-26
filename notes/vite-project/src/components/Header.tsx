@@ -10,6 +10,7 @@ export default function Header() {
             <nav>
                 <ListItem name="About" url="/" />
                 <ListItem name="Games" url="/games" />
+                <ListItem name="TTAL" url="/ttal" />
             </nav>
         </header>
     )
