@@ -8,3 +8,9 @@ export interface Fact {
     fact: string,
     isTrue: boolean,
 }
+
+export interface Game {
+    name: string,
+    images: string[],
+    description: string
+}

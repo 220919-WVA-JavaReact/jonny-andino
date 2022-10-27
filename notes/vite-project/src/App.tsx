@@ -7,7 +7,7 @@ import TTAL from "./pages/TTAL";
 
 export default function App() {
   return (
-    <>
+    <div className="container mx-auto max-w-2xl">
       <BrowserRouter>
         <Header />
         <Routes>
@@ -17,6 +17,6 @@ export default function App() {
         </Routes>
       </BrowserRouter>
       <Footer />
-    </>
+    </div>
   )
 }
